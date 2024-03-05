@@ -6,3 +6,5 @@ def solution(angle):
     4 if angle == 180 else 0
     )
     return answer
+
+print(solution(50))
