@@ -1,8 +1,8 @@
 def solution(n):
-    answer = set()
-    for i in range(n+1):
-        if i != 0:
-            answer.add(i if n%i==0 else 0)
-    return answer
-
-print(solution(20))
+    answer = []
+    for i in range(1,int(n**0.5)+1):
+        if n%i == 0:
+            answer.append((i, n//i))
+            if i != n//i:
+                answer.append((n//i, i))
+    return len(answer)
